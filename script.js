@@ -12,10 +12,14 @@ const changeColor = function () {
 };
 
 const logger = function (event) {
-    rangeSpan.textContent = event.target.value;
+    rangeSpan.textContent = event.target.value+'%';
     circle.style.width = parseInt(rangeSpan.textContent)+'%';
     circle.style.height = parseInt(rangeSpan.textContent)+'%';
 };
+
+rangeSpan.innerHTML = '<span id="range-span">50%</span>';
+circle.style.width = parseInt(rangeSpan.textContent)+'%';
+circle.style.height = parseInt(rangeSpan.textContent)+'%';
 
 button.addEventListener('click', changeColor);
 circleButton.style.display = 'none';
